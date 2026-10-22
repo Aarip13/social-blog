@@ -1,4 +1,5 @@
-
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '1.1.1.1']);
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
@@ -30,4 +31,5 @@ async function startServer() {
 }
 
 startServer();
+console.log("JWT_SECRET loaded:", Boolean(process.env.JWT_SECRET));
 //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWQ5MGVmZDIxYzRkNTFjMmUwOWFmYjYiLCJpYXQiOjE3OTI2MTEyMDQsImV4cCI6MTc5MjY5NzYwNH0.61SPTR7o-qo8SfzVAVB4IUWyvgIaiq2_DU-xk6FVk_Y
